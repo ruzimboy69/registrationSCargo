@@ -1,0 +1,44 @@
+.Carrier,.Sender, .Driver{
+    background-color: #f9f9f9;
+    border-radius: 5px;
+    color: rgba(0, 0, 0, 0.54);
+}
+.Carrierbtn,.Senderbtn,.Driverbtn{
+    display: none;
+}
+.CarrierPart:hover .Carrierbtn{
+    display: block;
+}
+.CarrierPart:hover .Carrier{
+    background-color: #febd33;
+}
+.SenderPart:hover .Senderbtn{
+    display: block;
+}
+.SenderPart:hover .Sender{
+    background-color: #c5cae9;
+}
+.DriverPart:hover .Driverbtn{
+    display: block;
+}
+.DriverPart:hover .Driver{
+    background-color: #c8db80;
+}
+.Carrier img{
+    opacity: 0.2;
+}
+.Sender img{
+    opacity: 0.2;
+}
+.Driver img{
+    opacity: 0.2;
+}
+.CarrierPart:hover img{
+    opacity: 1;
+}
+.SenderPart:hover img{
+    opacity: 1;
+}
+.DriverPart:hover img{
+    opacity: 1;
+}

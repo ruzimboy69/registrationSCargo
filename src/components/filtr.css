@@ -1,0 +1,39 @@
+.filtrModal{
+    height: 100%;
+    background-color: #fff;
+}
+.filtrItem{
+    padding:0  20px;
+    width: 40%;
+    border-bottom: none;
+}
+.filtrItem:hover{
+    background-color: #fff;
+    color: #2b2a2a;
+    border-bottom: none;
+}
+
+.filtrTab{
+    width: 100%;
+}
+.form-control{
+    width: 100%;
+    background-color: #d2d2d2;
+
+}
+.form-check{
+    padding: 12px  17px;
+}
+.Filtr{
+    position: fixed;
+    z-index: 2;
+    font-size: 20px;
+    padding: 5px 20px;
+}
+.MapItem{
+    margin-top: 80px;
+}
+.card-link{
+    background-color: red;
+   text-decoration: none;
+}

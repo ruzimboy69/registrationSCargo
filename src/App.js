@@ -1,14 +1,24 @@
-import React, {Component, useState} from 'react';
-import Sidebar from "./components/Sidebar";
+import React from 'react';
+import {BrowserRouter as Router, Route, Switch} from "react-router-dom";
+import Navbar from "./components/Navbar";
+import ThreeSections from "./components/ThreeSections";
+import Carrier from "./components/Carrier";
+import Sender from "./components/Sender";
 
-class App extends Component {
-    render() {
-        return (
-            <div>
-                <Sidebar/>
-            </div>
-        );
-    }
+
+function App() {
+    return (
+        <div>
+            <Router>
+                <Switch>
+                    <Route>
+                        <Navbar/>
+                       <ThreeSections/>
+                    </Route>
+                </Switch>
+            </Router>
+        </div>
+    );
 }
 
 

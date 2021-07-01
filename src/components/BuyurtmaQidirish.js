@@ -1,11 +1,12 @@
 import React, {Component} from 'react';
-import {AvForm, AvField} from 'availity-reactstrap-validation'
 import axios from "axios";
-import {Modal, ModalBody} from "reactstrap";
+import Filtr from "./Filtr";
+import {Link} from 'react-router-dom';
 
 class BuyurtmaQidirish extends Component {
     state = {
         topilganlar: [],
+        isOpen:false
     };
 
     componentDidMount() {
@@ -16,37 +17,43 @@ class BuyurtmaQidirish extends Component {
                 });
                 console.log(res);
             })
+    };
+    openModal=()=>{
+        this.setState({
+            isOpen:!this.state.isOpen
+        })
     }
 
 
     render() {
-        const {topilganlar} = this.state;
+        const {topilganlar,isOpen} = this.state;
         return (
             <div>
                 <div className="container">
                     <div className="row">
+                      <div className={'col-md-12 mt-3 bg-white  Filtr'}> <button type={'button'} onClick={this.openModal} className={'btn btn-warning text-white'}>Filtrlash</button></div>
                         {topilganlar.map((item, index) => (
-                            <div className="col-md-4" key={index}>
-                                <div className="card my-2">
-                                    <div className="card-header d-flex  justify-content-between text-center">
-                                       <div className={'d-flex'}>
-                                           <p>#{item.id} </p>
-                                           <p>Zagruzka</p>
-                                       </div>
+                            <div className="col-md-4 MapItem" key={index} >
+                                <div className="card" >
+                                    <Link className="card-header d-flex  justify-content-between text-center text-decoration-none">
+                                        <div className={'d-flex'}>
+                                            <p>#{item.id} </p>
+                                            <p>Zagruzka</p>
+                                        </div>
                                         <p>{item.phone}</p>
-                                    </div>
-                                    <div className="card-body">
+                                    </Link>
+                                    <Link className="card-body text-decoration-none">
                                         <h5>Age: {item.username}</h5>
                                         <h5>Position: {item.phone}</h5>
-                                    </div>
-                                    <div className={'card-footer d-flex justify-content-between'}>
+                                    </Link>
+                                    <Link className={'card-footer d-flex justify-content-between text-decoration-none'}>
                                         <i className="fas fa-truck"></i>
                                         <div>Taklif 1 ta avto</div>
-                                    </div>
+                                    </Link>
                                 </div>
                             </div>
-
                         ))}
+                        <Filtr isOpen={isOpen} openModal={this.openModal}/>
                     </div>
                 </div>
 

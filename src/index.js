@@ -3,10 +3,11 @@ import React from 'react'
 import 'bootstrap/dist/css/bootstrap.min.css';
 import './main.css'
 import App from "./App";
-
-
+import {BrowserRouter} from "react-router-dom";
 
 
 ReactDom.render(
-    <App/>
+    <BrowserRouter>
+        <App/>
+    </BrowserRouter>
     ,document.getElementById("root"));
