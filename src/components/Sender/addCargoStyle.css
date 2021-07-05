@@ -1,0 +1,11 @@
+.addCargoBtn{
+    position: absolute;
+    top:0;
+    right: 30px;
+}
+.addCargoDiv{
+    position: relative;
+}
+.fas.fa-times{
+    color:rgba(0,0,0,0.3);
+}

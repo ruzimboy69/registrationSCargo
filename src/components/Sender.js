@@ -46,6 +46,9 @@ let changePath=useHistory();
                         <div className={'row'}>
                             <div style={{width: "100%", marginTop: "34px"}}>
                                 <Switch>
+                                    <Route exact path="/Sender/MyLoads">
+                                        <MyLoads/>
+                                    </Route>
                                     <Route path="/Sender/Dashboard">
                                         <Modal isOpen={modal} toggle={openModal} >
                                             <ModalHeader toggle={openModal}></ModalHeader>
@@ -57,7 +60,7 @@ let changePath=useHistory();
                                                              className={'img-fluid rounded-circle mr-4'}/>
                                                         <h5 className={'mt-4 mx-3'}>Tashuvchi</h5>
                                                     </div>
-                                                    <button onClick={()=>{changePath.push("/Carrier")}} className={'Carrierbtn btn btn-block my-3 '} style={{backgroundColor:'#a17d32',color:"#fff"}} >Buyurtma qidirish</button>
+                                                    <button onClick={()=>{changePath.push("/Carrier/buyurtmalar")}} className={'Carrierbtn btn btn-block my-3 '} style={{backgroundColor:'#a17d32',color:"#fff"}} >Buyurtma qidirish</button>
                                                 </div>
                                                 <div className={'SenderPart text-center px-5 my-3'}>
                                                     <div className={'Sender d-flex justify-content-center '}>
@@ -77,9 +80,6 @@ let changePath=useHistory();
                                                 </div>
                                             </ModalBody>
                                         </Modal>
-                                    </Route>
-                                    <Route exact path="/Sender/MyLoads">
-                                        <MyLoads/>
                                     </Route>
                                     <Route path="/Sender/AddCargo">
                                         <AddCargo/>

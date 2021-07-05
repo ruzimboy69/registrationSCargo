@@ -59,7 +59,7 @@ function Carrier() {
                                                             className={'img-fluid rounded-circle mr-4'}/>
                                                        <h5 className={'mt-4 mx-3'}>Tashuvchi</h5>
                                                    </div>
-                                                   <button onClick={()=>{changePath.push("/Carrier")}} className={'Carrierbtn btn btn-block my-3 '} style={{backgroundColor:'#a17d32',color:"#fff"}} >Buyurtma qidirish</button>
+                                                   <button onClick={()=>{changePath.push("/Carrier/buyurtmalar")}} className={'Carrierbtn btn btn-block my-3 '} style={{backgroundColor:'#a17d32',color:"#fff"}} >Buyurtma qidirish</button>
                                                </div>
                                                 <div className={'SenderPart text-center px-5 my-3'}>
                                                     <div className={'Sender d-flex justify-content-center '}>
@@ -67,7 +67,7 @@ function Carrier() {
                                                              className={'img-fluid rounded-circle mr-3'}/>
                                                         <h5 className={'mt-4 mx-3'}>Jo'natuvchi</h5>
                                                     </div>
-                                                    <button onClick={()=>{changePath.push("/Sender")}} className={"Senderbtn btn btn-block my-3"} style={{backgroundColor:"#6d718b",color:"#fff"}}  >Yuk qo'shish</button>
+                                                    <button onClick={()=>{changePath.push("/Sender/MyLoads")}} className={"Senderbtn btn btn-block my-3"} style={{backgroundColor:"#6d718b",color:"#fff"}}  >Yuk qo'shish</button>
                                                 </div>
                                                <div className={'DriverPart text-center px-5'}>
                                                    <div className={'Driver d-flex justify-content-center '} >

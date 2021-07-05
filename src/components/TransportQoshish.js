@@ -1,6 +1,8 @@
 import React, {Component} from 'react';
 import {AvForm, AvField} from "availity-reactstrap-validation";
+import {BrowserRouter as Router, Link, Route, Switch,useHistory} from "react-router-dom";
 import "./transportQoshish.css";
+
 
 class TransportQoshish extends Component {
     state={
@@ -17,6 +19,7 @@ class TransportQoshish extends Component {
             <div>
                 <div className={'container rounded'} style={{backgroundColor:"#f6f1f1"}}>
                     <div className={'row my-5 border-bottom py-5 mx-4'}>
+                        <div className={"col-md-12 my-3"}><Link to={"/Carrier/Transport"}>Orqaga</Link></div>
                         <div className={'col-md-6'}>
                             <h4>To'liq ma'lumot</h4>
                             <AvForm>
