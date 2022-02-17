@@ -74,3 +74,4 @@ function SozlamalarXodimlar(props) {
         </div>
     )
 }
+export default SozlamalarXodimlar;
